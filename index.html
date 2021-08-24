@@ -5,132 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Mali:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
     <title>Tejidos Meli</title>
 </head>
-<style>
-    body {
-        margin: 0px;
-        margin-top: 0px;
-        font-family: 'Montserrat', sans-serif;
-        background: white;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right,#f0f1f5, #f0caeb);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #f0f1f5, #f0caeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    }
-    .header {
-        margin: 0%;
-        width: 100%;
-        height: 120px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .header_img {
-        margin-top: 15px;
-        margin-left: 15px;
-    }
-
-    .main_texto {
-        margin-left: 2px;
-        font-size: 20px;
-    }
-    .buscador{
-        border: 1px solid black;
-        border-radius: 20px;
-        font-family: 'Montserrat', sans-serif;
-        width: 100%;
-        height: 20%;
-        outline-style: none;
-        padding: 0px 20px;
-    }
-    .header_menu {
-        margin-right: 50px;
-        margin-left: -15px;
-        align-items: center;
-    }
-    .header_menu:hover ul, ul :hover{
-        display: block;
-    }
-    .header_menu ul{
-        display: none;
-        position: absolute;
-        list-style: none;
-        text-align: right;
-        padding: 0px;
-        margin-left: 8px;
-        margin-top: 0px;
-    }
-    .header_menu_lista {
-        margin-left: 5px;
-        margin-bottom: 2px;
-    }
-    .header_menu li {
-        margin: 10px 2px;
-    } 
-    .header_menu li a {
-        color: black;
-        text-decoration: none;
-    }
-
-    .header_menu li a:hover {
-        text-decoration: underline;
-    }
-
-    .carousel{
-        width: 100%;
-        overflow: scroll;
-        padding: 30px;
-        position: relative;
-    }
-    .carousel_container {
-        white-space: nowrap;
-        margin: 70px 0px;
-        padding-bottom: 20px;
-    }
-    .carousel-item{
-        width: 200px;
-        height: 250px;
-        border-radius: 25px;
-        background-color: blueviolet;
-        display: inline-block;
-        cursor: pointer;
-        transition: 450ms all;
-        transform-origin: center left;
-        overflow: hidden;
-    }
-    .carousel-item:hover ~ .carousel-item {
-        transform: translate3d(100px, 0, 0);
-    }
-    .carousel_container:hover .carousel-item{
-        opacity: 0.3;
-    }
-    .carousel_container .carousel-item:hover {
-        transform: scale(1.5);
-        opacity: 1;
-    }
-    .carousel-item__img{
-        width: 200px;
-        height: 250px;
-        object-fit: cover;
-    }
-
-</style>
 <body>
     <header class="header">
-        <img class="header_img" src="logo.png" alt="Logo de Tejidos Meli"> 
-        <section class="main">
-            <h2 class="main_texto">¿Que estas buscando?</h2>
-            <input class="buscador" type="text" placeholder="Buscar...">
-        </section>
-        <div class="header_menu">
-        <div class="header_menu_lista">
-             <p>Menu</p>
+        <div class="header-amigurumis">
+            <a href="">
+                <img src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDEyOCAxMjgiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTEwNS44MzMgMjEuNzk0YTE0LjE4OSAxNC4xODkgMCAwIDAgLTIwLjQ0Ny0uOSA1Ljc1NyA1Ljc1NyAwIDAgMCAtLjQ3IDcuOTQ2IDUuNjEyIDUuNjEyIDAgMCAwIDcuOTU3LjQyMiAzLjIzNyAzLjIzNyAwIDAgMSA0LjAyNS0uNSAyLjk2MSAyLjk2MSAwIDAgMSAuMzc0IDQuNWwtMTUuMTM0IDE1LjEzMmEzMy41MTUgMzMuNTE1IDAgMCAwIC0yNi40MTctMy45NjUgMzMuNTc5IDMzLjU3OSAwIDAgMCAtMjMuODMyIDIzLjgyMyAzMy4yNjggMzMuMjY4IDAgMCAwIC0uODQ1IDEyLjg2OWwtOC44NjEgOC44NjFhMTIuMTA2IDEyLjEwNiAwIDEgMCAxNy4xMjQgMTcuMTE4bDQuMDE0LTQuMDE0YTMzLjUxNCAzMy41MTQgMCAwIDAgMjkuNjc5IDYuMjc1IDMzLjU4IDMzLjU4IDAgMCAwIDIzLjgyLTIzLjgyNyAzMy40NyAzMy40NyAwIDAgMCAtNi4yNzMtMjkuNjczbDE0LjQtMTQuNGExNC40MDcgMTQuNDA3IDAgMCAwIC44ODYtMTkuNjY3em0tNjYuMDczIDUwLjYxMS00LjItNC4yYTMwLjAzOCAzMC4wMzggMCAwIDEgNi4zMjUtMTEuMzE2bDYuNyA2Ljd6bTEyLjEyOS0xMi4xMy0uODM0LjgzNS02LjctNi43YTMwLjExOCAzMC4xMTggMCAwIDEgMTEuMy02LjMyN2w5LjY3NyA5LjY3N2ExMi4xMDYgMTIuMTA2IDAgMCAwIC0xMy40NDYgMi41MTV6bTI3LjctOS4zNDEtOC4wNjQgOC4wNzEtMTEuODM3LTExLjg0MWEyOS45NzUgMjkuOTc1IDAgMCAxIDE5LjkwNSAzLjc3em0tNDQuOTY2IDIxLjI4NCAyLjY2MiAyLjY2Mi0zIDNhMjkuNyAyOS43IDAgMCAxIC4zMzgtNS42NjJ6bTM4LjQyNSAzMy40NzYtMTYuMTY4LTE2LjE2OSA4LjgyLTguODIgMTguNjY0IDE4LjY2NGEzMC4wMzIgMzAuMDMyIDAgMCAxIC0xMS4zMTYgNi4zMjV6bTIwLjEyLTIwLjFhMjkuODg1IDI5Ljg4NSAwIDAgMSAtNi4zMjUgMTEuM2wtMTguNjY4LTE4LjY2NCA2LjgtNi44IDIuMDEyLTIuMDEzIDEgMXptLTQ3LjM1OCAxNSA4LjYtOC41OTEgMTQuNjIyIDE0LjYyM2EzMCAzMCAwIDAgMSAtMjMuMjIyLTYuMDI2em00OC4yNzgtMTkuMDMxLTkuNDc4LTkuNDc4LTUuMTQ1LTUuMTQ1IDguNi04LjZhMjkuOTYxIDI5Ljk2MSAwIDAgMSA2LjAyMyAyMy4yMjN6bS03LjE0NS0yNy4wNTEtMTEuMTkgMTEuMTg4LTMzLjc3IDMzLjc3di4wMDVsLTUuMTQ0IDUuMTQzYTguNjA2IDguNjA2IDAgMSAxIC0xMi4xODMtMTIuMTZsOS40NjktOS40NjkgNi44NzUtNi44NzIgMTEuMjQxLTExLjI0NGMuMDE4LS4wMTcuMDM5LS4wMjguMDU2LS4wNDZzLjAzLS4wMzguMDQ2LS4wNTZsMi4wMjQtMi4wMjRhOC42MiA4LjYyIDAgMCAxIDEyLjE3NSAwIDQuMzgzIDQuMzgzIDAgMCAwIDYuMDIuMTQ3Yy4wMi0uMDE4LjA0My0uMDI5LjA2Mi0uMDQ3YTEuNyAxLjcgMCAwIDAgLjE0Mi0uMTI2bDI2Ljk3OC0yNi45OWE2LjQ2MiA2LjQ2MiAwIDAgMCAtLjc4NC05LjggNi42NjUgNi42NjUgMCAwIDAgLTguNDQxLjczOCAyLjExMiAyLjExMiAwIDAgMSAtMy0uMTYxIDIuMjY3IDIuMjY3IDAgMCAxIC4yNzUtMy4wOCAxMC42OTEgMTAuNjkxIDAgMCAxIDE1LjQwNy42ODIgMTAuOSAxMC45IDAgMCAxIC0uNzM0IDE0Ljg3NXoiLz48L3N2Zz4=" alt="crochet img" />
+            
+                Amigurumis
+            </a>
+            
         </div>
-        <ul>
-           <li><a href="/">Trabajos</a></li>
-           <li><a href="/">Pedidos</a></li> 
-        </ul>
-    </div>
+        <div class="header-logo">
+            <img class="header-logo-img" src="logonombre.png" alt="Logo de Tejidos Meli"> 
+        </div>
+        <div class="header-accesorios">
+            <a href="">
+                <img src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDEyOCAxMjgiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZD0ibTk3LjA1IDMwLjk1YTQ2LjcxOCA0Ni43MTggMCAxIDAgMCA2Ni4xIDQ2Ljc5MiA0Ni43OTIgMCAwIDAgMC02Ni4xem0tMi40NzUgNjMuNjI1YTQzLjIyIDQzLjIyIDAgMSAxIDAtNjEuMTUgNDMuMjg3IDQzLjI4NyAwIDAgMSAwIDYxLjE1eiIvPjxwYXRoIGQ9Im04OC41NTYgMzkuNDQ0YTM0LjcxIDM0LjcxIDAgMSAwIDAgNDkuMTEyIDM0Ljc2OSAzNC43NjkgMCAwIDAgMC00OS4xMTJ6bS0yLjQ3NSA0Ni42MzdhMzEuMjEyIDMxLjIxMiAwIDEgMSAwLTQ0LjE2MiAzMS4yNjQgMzEuMjY0IDAgMCAxIDAgNDQuMTYyeiIvPjxwYXRoIGQ9Im01NS43NTQgNTkuMzgyYTYuNTI4IDYuNTI4IDAgMSAwIDAgOS4yMzYgNi41MzggNi41MzggMCAwIDAgMC05LjIzNnptLTIuNDc1IDYuNzYyYTMuMDMgMy4wMyAwIDEgMSAwLTQuMjg4IDMuMDQgMy4wNCAwIDAgMSAwIDQuMjg4eiIvPjxwYXRoIGQ9Im02NCA1Ny42NjRhNi41MjkgNi41MjkgMCAxIDAgLTQuNjE4LTEuOTEgNi41MSA2LjUxIDAgMCAwIDQuNjE4IDEuOTF6bS0yLjE0NC04LjY3M2EzLjAzMiAzLjAzMiAwIDEgMSAwIDQuMjg4IDMuMDI0IDMuMDI0IDAgMCAxIDAtNC4yODh6Ii8+PHBhdGggZD0ibTU5LjM4MiA3Mi4yNDZhNi41MzEgNi41MzEgMCAxIDAgOS4yMzYgMCA2LjUzOCA2LjUzOCAwIDAgMCAtOS4yMzYgMHptNi43NjIgNi43NjNhMy4wMzEgMy4wMzEgMCAxIDEgMC00LjI4OCAzLjAzOCAzLjAzOCAwIDAgMSAwIDQuMjg4eiIvPjxwYXRoIGQ9Im03Mi4yNDYgNTkuMzgyYTYuNTMxIDYuNTMxIDAgMSAwIDkuMjM3IDAgNi41MzcgNi41MzcgMCAwIDAgLTkuMjM3IDB6bTYuNzYzIDYuNzYyYTMuMDMgMy4wMyAwIDEgMSAwLTQuMjg4IDMuMDM4IDMuMDM4IDAgMCAxIDAgNC4yODh6Ii8+PC9nPjwvc3ZnPg==" alt="botton icon"/>
+                Accesorios
+            </a>
+            </div>
+
     </header>
-    <section class="carousel">
+    <main>
+
+    </main>
+    <footer>
+        <div>Icons made by <a href="https://www.flaticon.com/free-icon/crochet_4539025?term=crocheting&related_id=4539025" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </footer>
+    <!--<section class="carousel">
         <div class="carousel_container">
             <div class="carousel-item">
                 <img class="carousel-item__img" src="abejitas.jpg" alt="abejitas">
@@ -138,7 +46,6 @@
             <div class="carousel-item">
                 <img class="carousel-item__img" src="gatito.jpg" alt="gatito">
             </div>
-        </div>
-    </section>
+        </div>-->
 </body>
 </html>

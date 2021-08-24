@@ -1,0 +1,137 @@
+body {
+    margin: 0px;
+    margin-top: 0px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8edeb;
+}
+.header {
+    margin: 0%;
+    width: 100%;
+    height: 100px;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid black;
+}
+
+header .header-amigurumis {
+    text-align: center;
+    align-content: center;
+    margin: 10px;
+}   
+
+header .header-amigurumis:hover {
+    border-bottom: 2px solid rgb(236, 86, 169);
+}
+
+header .header-amigurumis img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;    
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header .header-accesorios {
+    margin: 10px;
+}
+
+header .header-accesorios img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto; 
+}
+
+header .header-accesorios:hover {
+    border-bottom: 2px solid rgb(236, 86, 169);
+}
+
+header .header-logo {
+    align-content: center;
+}
+
+header .header-logo-img {
+    margin-top: 18px;
+}
+
+
+
+.main_texto {
+    margin-left: 2px;
+    font-size: 20px;
+}
+.header_menu {
+    margin-right: 50px;
+    margin-left: -15px;
+    align-items: center;
+}
+.header_menu:hover ul, ul :hover{
+    display: block;
+}
+.header_menu ul{
+    display: none;
+    position: absolute;
+    list-style: none;
+    text-align: right;
+    padding: 0px;
+    margin-left: 8px;
+    margin-top: 0px;
+}
+.header_menu_lista {
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+.header_menu li {
+    margin: 10px 2px;
+} 
+.header_menu li a {
+    color: black;
+    text-decoration: none;
+}
+
+.header_menu li a:hover {
+    text-decoration: underline;
+}
+
+.carousel{
+    width: 100%;
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+}
+.carousel_container {
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom: 20px;
+}
+.carousel-item{
+    width: 200px;
+    height: 250px;
+    border-radius: 25px;
+    background-color: blueviolet;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    overflow: hidden;
+}
+.carousel-item:hover ~ .carousel-item {
+    transform: translate3d(100px, 0, 0);
+}
+.carousel_container:hover .carousel-item{
+    opacity: 0.3;
+}
+.carousel_container .carousel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+.carousel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
